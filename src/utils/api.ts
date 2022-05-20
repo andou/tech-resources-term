@@ -8,6 +8,20 @@ export const getProjects = async () => {
   return data;
 };
 
+export const getTechLinks = async () => {
+  const { data } = await axios.get(
+    `https://raw.githubusercontent.com/andou/tech-resources/master/README.md`,
+  );
+  return data;
+};
+
+export const getIp = async () => {
+  const { data } = await axios.get(
+    `https://api.ipify.org`,
+  );
+  return data;
+};
+
 export const getReadme = async () => {
   const { data } = await axios.get(config.readmeUrl);
   return data;
